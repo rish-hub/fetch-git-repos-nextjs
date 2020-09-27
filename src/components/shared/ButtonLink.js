@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./button-link.module.scss";
+import styles from "./ButtonLink.module.scss";
 import Link from "next/link";
 
 const ButtonLink = ({ href, text, type = "primary", target, external }) => {

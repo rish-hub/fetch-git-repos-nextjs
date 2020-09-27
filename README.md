@@ -2,7 +2,8 @@ This project was bootstrapped with [npx Create Next App].
 
 ## [Demo](https://git-repo-api.vercel.app) - Next.js | SSR | GIT APIs
 <img src="https://github.com/rish-hub/fetch-git-repos-nextjs/blob/master/public/img/git-fetch.gif" alt="banner that says Rishabh Jain - a full stack web developer and tech blogger alongside illustration of Next.js Git api"> 
-This is a [Next.js](https://nextjs.org/) 
+
+This is a [Next.js](https://nextjs.org) 
 project bootstrapped with 
 [npx create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 

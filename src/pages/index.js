@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import Search from "./../components/Search";
 import RepoList from "./../components/RepoList";
 import { searchRepos } from "./../services/githubServices";
+import styles from  "./../pages/index.module.scss";
 
 export default function Home({ searchTerm, repoList }) {
   const [searchText, setSearchText] = useState(searchTerm);
@@ -25,7 +26,8 @@ export default function Home({ searchTerm, repoList }) {
     if (res && res.data && res.data.items) setRepos(res.data.items);
   };
   return (
-    <div>
+    <div className={styles.container}>
+      <img className={styles.log} src="/img/undraw_next_js_8g5m.svg" alt="header" />
       <Search
         searchText={searchText}
         language={language}

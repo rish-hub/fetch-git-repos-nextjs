@@ -2,19 +2,21 @@ import React from "react";
 import Select from "./shared/Select";
 import TextInput from "./shared/TextInput";
 import LANGUAGES from "../contants/languages.contant";
-
+import styles from "./search.module.scss";
 const Search = (props) => {
   const { language, searchText, onSearchTextChange, onLanguageChange } = props;
 
   const languages = [{ value: "", label: "All" }, ...LANGUAGES];
   return (
-    <div>
+    <div className={styles.search}>
       <TextInput
-        label="Repo Search"
+      className={styles.searchInput}
+        label="Git Repo Search"
         value={searchText}
         onChange={(value) => onSearchTextChange(value)}
       />
       <Select
+      className={styles.languageSelect}
         label="Language"
         value={language}
         options={languages}

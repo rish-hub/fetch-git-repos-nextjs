@@ -9,6 +9,14 @@ const axiosConfig = {
   },
 };
 
+function getRepo(id) {
+  return axios.get(`repositories/${id}`, axiosConfig);
+}
+
+function getProfile(username) {
+  return axios.get(`users/${username}`, axiosConfig);
+}
+
 function searchRepos(searchText, language) {
   const query = language ? `${searchText}+language:${language}` : searchText;
   if (isServer()) {
@@ -20,7 +28,8 @@ function searchRepos(searchText, language) {
     return axiosGetCancellable(`api/search?q=${query}&sort=stars&order=desc`);
   }
 }
+
 function isServer() {
   return typeof window === "undefined";
 }
-export { searchRepos };
+export { searchRepos, getRepo, getProfile };

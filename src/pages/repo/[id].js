@@ -3,10 +3,16 @@ import { getRepo } from "./../../services/githubServices";
 import styles from "./repo.module.scss";
 import ButtonLink from "./../../components/shared/ButtonLink";
 import UserAvatar from "./../../components/UserAvatar";
+import Head from "next/head";
 
 const Repo = ({ repo }) => {
   return (
     <div>
+      <Head>
+        <title>{repo.name}</title>
+        <meta property="og:title" content={`Next.js Example | ${repo.name}`} />
+        <meta property="og:image" content={`${repo.owner.avatar_url}`} />
+      </Head>
       <ButtonLink href="/" text="Back" />
       <div className={styles.header}>
         <span className="span">{repo.name}</span>
